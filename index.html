@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Z-score e Percentil</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<header>
   <h1>Calculadora de Z-score e Percentil</h1>
-  
-  <form id="calculatorForm">
-    <label for="experimentalValue">Valor Experimental:</label>
-    <input type="number" id="experimentalValue" required><br><br>
-    
-    <label for="mean">Média:</label>
-    <input type="number" id="mean" required><br><br>
-    
-    <label for="standardDeviation">Desvio Padrão:</label>
-    <input type="number" id="standardDeviation" required><br><br>
-    
-    <button type="button" onclick="calculateZScoreAndPercentile()">Calcular</button>
-    <button type="button" onclick="calculateZScoreAndPercentileInvert()">Calcular Invertido</button>
-  </form>
-  
-  <div id="resultContainer">
-    <h2>Resultado:</h2>
-    <p id="zScore"></p>
-    <p id="percentile"></p>
-  </div>
-
-  <a href="/zscore/tabela.html">Conferir tabela de conversão</a>
-  
+</header>
+ <main> 
+   <form id="calculatorForm">
+     <label for="experimentalValue">Valor Experimental:</label>
+     <input type="number" id="experimentalValue" required><br><br>
+   
+     <label for="mean">Média:</label>
+     <input type="number" id="mean" required><br><br>
+   
+     <label for="standardDeviation">Desvio Padrão:</label>
+     <input type="number" id="standardDeviation" required><br><br>
+     <div class="submit">
+   
+       <button type="button" onclick="calculateZScoreAndPercentile()">Calcular</button>
+       <button type="button" onclick="calculateZScoreAndPercentileInvert()">Calcular Invertido</button>
+     </div>
+   </form>
+   
+   <div id="resultContainer">
+     <h2>Resultado:</h2>
+     <p id="zScore"></p>
+     <p id="percentile"></p>
+   </div>
+ </main>
+<footer>
+    <a href="/zscore/tabela.html">Conferir tabela de conversão</a>
+</footer>
   <script src="script.js"></script>
 </body>
 </html>
