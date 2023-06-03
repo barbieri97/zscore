@@ -1,0 +1,64 @@
+:root {
+    --color1: #524AF8;
+    --color2: #4162D9;
+    --color3: #549FF0;
+    --color4: #41B2D9;
+    --color5: #4AF8F6;
+    --black: #000;
+    --white: #d9d9d9;
+
+
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* debbugin */
+/* * {
+    background-color: rgba(0, 255, 0, 0.781);
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+  }
+  
+  #resultContainer {
+    margin-top: 30px;
+  }
+  
+  #resultContainer h2 {
+    margin-bottom: 10px;
+  }
+  
+  #resultContainer p {
+    margin-bottom: 5px;
+  }
+  

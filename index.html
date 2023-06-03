@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Z-score e Percentil</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Calculadora de Z-score e Percentil</h1>
+  
+  <form id="calculatorForm">
+    <label for="experimentalValue">Valor Experimental:</label>
+    <input type="number" id="experimentalValue" required><br><br>
+    
+    <label for="mean">Média:</label>
+    <input type="number" id="mean" required><br><br>
+    
+    <label for="standardDeviation">Desvio Padrão:</label>
+    <input type="number" id="standardDeviation" required><br><br>
+    
+    <button type="button" onclick="calculateZScoreAndPercentile()">Calcular</button>
+    <button type="button" onclick="calculateZScoreAndPercentileInvert()">Calcular Invertido</button>
+  </form>
+  
+  <div id="resultContainer">
+    <h2>Resultado:</h2>
+    <p id="zScore"></p>
+    <p id="percentile"></p>
+  </div>
+
+  <a href="/tabela.html">Conferir tabela de conversão</a>
+  
+  <script src="script.js"></script>
+</body>
+</html>
