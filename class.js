@@ -1,6 +1,6 @@
 function getClassification(percentile) {
     if (percentile >= 0 && percentile <= 10) {
-      return "Muito Interior";
+      return "Muito Inferior";
     } else if (percentile < 30) {
       return "Inferior";
     } else if (percentile < 40) {
