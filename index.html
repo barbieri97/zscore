@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de Z-score e Percentil</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<header>
-  <h1>Calculadora de Z-score e Percentil</h1>
-</header>
- <main> 
-   <form id="calculatorForm">
-     <label for="experimentalValue">Valor Experimental:</label>
-     <input type="number" id="experimentalValue" required><br><br>
-   
-     <label for="mean">Média:</label>
-     <input type="number" id="mean" required><br><br>
-   
-     <label for="standardDeviation">Desvio Padrão:</label>
-     <input type="number" id="standardDeviation" required><br><br>
-     <div class="submit">
-   
-       <button type="button" onclick="calculateZScoreAndPercentile()">Calcular</button>
-       <button type="button" onclick="calculateZScoreAndPercentileInvert()">Calcular Invertido</button>
-     </div>
-   </form>
-   
-   <div id="resultContainer">
-     <h2>Resultado:</h2>
-     <p id="zScore"></p>
-     <p id="percentile"></p>
-   </div>
- </main>
-<footer>
-    <a href="/tabela.html">Conferir tabela de conversão</a>
-</footer>
-  <script defer src="script.js"></script>
-  <script defer src="ntfy.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/assets/z.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./dist/index.js" defer></script>
+    <title>ZSCORE</title>
+  </head>
+  <body>
+    <header>
+      <h1>Z-SCORE</h1>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <section class="form-section">
+        <h2>Dados</h2>
+        <form id="zscore-form">
+          <div class="form-group">
+            <label for="raw-score">Resultado Bruto:</label>
+            <input type="number" id="raw-score" name="raw-score" required />
+          </div>
+          <div class="form-group">
+            <label for="mean">Média:</label>
+            <input type="number" id="mean" name="mean" required />
+          </div>
+          <div class="form-group">
+            <label for="std-dev">Desvio Padrão:</label>
+            <input type="number" id="std-dev" name="std-dev" required />
+          </div>
+          <div class="form-group checkbox">
+            <label for="inverted">Invertido?</label>
+            <input type="checkbox" id="inverted" name="inverted" />
+          </div>
+          <button type="submit">Calcular</button>
+        </form>
+      </section>
+
+      <section class="result-section">
+        <h2>Resultados</h2>
+        <p>Z-Score: <span id="zscore-result">--</span></p>
+        <p>Percentile: <span id="percentile-result">--</span></p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Z-Score Calculator</p>
+    </footer>
+  </body>
 </html>
