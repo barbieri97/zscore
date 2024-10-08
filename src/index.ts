@@ -10,6 +10,7 @@ function calculateZScore(rawScore: number, mean: number, stdDev: number, invert:
 
 // Função para lidar com o envio do formulário
 function handleFormSubmit(event: Event) {
+    console.log('hello')
     event.preventDefault(); // Evita o comportamento padrão de envio do formulário
 
     // Obtendo os valores dos inputs
@@ -19,8 +20,14 @@ function handleFormSubmit(event: Event) {
     const invertZScore = (<HTMLInputElement>document.getElementById('inverted')).checked;
 
     // Calculando o Z-Score
-    const zScore = calculateZScore(rawScore, mean, stdDev, invertZScore);
-    const percentil = zscoreValues.find((e) => e.zscore === zScore)?.percentil
+    const zScore = parseFloat(calculateZScore(rawScore, mean, stdDev, invertZScore).toFixed(2));
+    var percentil: string | number | undefined
+
+    if (zScore > 3 || zScore < -3) {
+        percentil = zScore > 0? 100:0
+    } else {
+        percentil = zscoreValues.find((e) => e.zscore === zScore)?.percentil
+    }
 
     // Exibindo os resultados
     document.getElementById('zscore-result')!.textContent = `${zScore.toFixed(2)}`;

@@ -20,15 +20,27 @@
         <form id="zscore-form">
           <div class="form-group">
             <label for="raw-score">Resultado Bruto:</label>
-            <input type="number" id="raw-score" name="raw-score" required />
+            <input
+              type="number"
+              id="raw-score"
+              name="raw-score"
+              step="any"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="mean">Média:</label>
-            <input type="number" id="mean" name="mean" required />
+            <input type="number" id="mean" name="mean" step="any" required />
           </div>
           <div class="form-group">
             <label for="std-dev">Desvio Padrão:</label>
-            <input type="number" id="std-dev" name="std-dev" required />
+            <input
+              type="number"
+              id="std-dev"
+              name="std-dev"
+              step="any"
+              required
+            />
           </div>
           <div class="form-group checkbox">
             <label for="inverted">Invertido?</label>
