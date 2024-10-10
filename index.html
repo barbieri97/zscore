@@ -3,63 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./src/assets/z.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <script src="./dist/index.js" defer></script>
-    <title>ZSCORE</title>
+    <link rel="shortcut icon" href="z.png" type="image/x-icon" />
+    <title>ZSCOREPRO</title>
+    <style>
+      body {
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+
+      h1 a {
+        background: linear-gradient(45deg, #002d5e, #007bff, #007bff, #002d5e);
+        color: transparent;
+        text-decoration: none;
+        background-clip: text;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Z-SCORE</h1>
-    </header>
-
-    <!-- Main content -->
-    <main>
-      <section class="form-section">
-        <h2>Dados</h2>
-        <form id="zscore-form">
-          <div class="form-group">
-            <label for="raw-score">Resultado Bruto:</label>
-            <input
-              type="number"
-              id="raw-score"
-              name="raw-score"
-              step="any"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="mean">Média:</label>
-            <input type="number" id="mean" name="mean" step="any" required />
-          </div>
-          <div class="form-group">
-            <label for="std-dev">Desvio Padrão:</label>
-            <input
-              type="number"
-              id="std-dev"
-              name="std-dev"
-              step="any"
-              required
-            />
-          </div>
-          <div class="form-group checkbox">
-            <label for="inverted">Invertido?</label>
-            <input type="checkbox" id="inverted" name="inverted" />
-          </div>
-          <button type="submit">Calcular</button>
-        </form>
-      </section>
-
-      <section class="result-section">
-        <h2>Resultados</h2>
-        <p>Z-Score: <span id="zscore-result">--</span></p>
-        <p>Percentile: <span id="percentile-result">--</span></p>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 Z-Score Calculator</p>
-    </footer>
+    <h1>
+      PARA UM MELHOR FUNCIONAMENTO O SITE FOI MOVIDO PARA
+      <a href="https://zscorepro.com.br">ZSCOREPRO.COM.BR</a>
+    </h1>
+    <h2>
+      Clique <a href="https://zscorepro.com.br">aqui</a> ou espere alguns
+      segundos que você será redirecionado para o novo endereço
+    </h2>
+    <script>
+      setTimeout(() => {
+        window.location.href = "https://zscorepro.com.br";
+      }, 10000);
+    </script>
   </body>
 </html>
